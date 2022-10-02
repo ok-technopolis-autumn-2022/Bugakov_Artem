@@ -1,13 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>todo</title>
 </head>
 <body>
 
+    <div class="main-wrapper">
+        <header class="header">
+            <h1 class="header__title">todos</h1>
+        </header>
+
+        <section class="content">
+            <div class="content__header">
+                <input type="checkbox" id="content-header__check">
+                <input type="text" name="new-todo" id="new-todo" placeholder="What needs to be done?">
+            </div>
+
+            <ul class="todos">
+                <li class="todo">
+                    <input type="checkbox" class="todo__btn--check">
+                    <p class="todo__text">HTML</p>
+                    <button class="todo__btn--delete"></button>
+                </li>
+                <li class="todo">
+                    <input type="checkbox" class="todo__btn--check">
+                    <p class="todo__text">CSS</p>
+                    <button class="todo__btn--delete"></button>
+                </li>
+                <li class="todo">
+                    <input type="checkbox" class="todo__btn--check">
+                    <p class="todo__text">JS</p>
+                    <button class="todo__btn--delete"></button>
+                </li>
+                <li class="todo">
+                    <input type="checkbox" class="todo__btn--check">
+                    <p class="todo__text">JS tools</p>
+                    <button class="todo__btn--delete"></button>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <p class="footer__items-left">3 items left</p>
+            <button class="footer__btn">All</button>
+            <button class="footer__btn">Active</button>
+            <button class="footer__btn">Completed</button>
+            <button class="footer__btn--clear">Clear completed</button>
+        </footer>
+    </div>
 </body>
 </html>
