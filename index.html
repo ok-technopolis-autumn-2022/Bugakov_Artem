@@ -13,39 +13,91 @@
 
         <section class="content">
             <div class="content__header">
-                <input type="checkbox" id="content-header__check">
-                <input type="text" name="new-todo" id="new-todo" placeholder="What needs to be done?">
+                <input type="checkbox"
+                       id="content-header__check"
+                       aria-label="Select all todos"
+                >
+                <input type="text"
+                       name="new-todo"
+                       id="new-todo"
+                       placeholder="What needs to be done?"
+                       aria-label="Add todo"
+                >
             </div>
 
             <ul class="todos">
                 <li class="todo">
-                    <input type="checkbox" class="todo__btn--check">
+                    <input type="checkbox"
+                           class="todo__btn--check"
+                           aria-label="Add todo"
+                    >
                     <p class="todo__text">HTML</p>
-                    <button class="todo__btn--delete"></button>
+                    <button class="todo__btn--delete"
+                            aria-label="Delete todo"
+                    >
+                    </button>
                 </li>
                 <li class="todo">
-                    <input type="checkbox" class="todo__btn--check">
+                    <input type="checkbox"
+                           class="todo__btn--check"
+                           aria-label="Add todo"
+                    >
                     <p class="todo__text">CSS</p>
-                    <button class="todo__btn--delete"></button>
+                    <button class="todo__btn--delete"
+                            aria-label="Delete todo"
+                    >
+                    </button>
                 </li>
                 <li class="todo">
-                    <input type="checkbox" class="todo__btn--check">
+                    <input type="checkbox"
+                           class="todo__btn--check"
+                           aria-label="Add todo"
+                    >
                     <p class="todo__text">JS</p>
-                    <button class="todo__btn--delete"></button>
+                    <button class="todo__btn--delete"
+                            aria-label="Delete todo"
+                    >
+                    </button>
                 </li>
                 <li class="todo">
-                    <input type="checkbox" class="todo__btn--check">
+                    <input type="checkbox"
+                           class="todo__btn--check"
+                           aria-label="Add todo"
+                    >
                     <p class="todo__text">JS tools</p>
-                    <button class="todo__btn--delete"></button>
+                    <button class="todo__btn--delete"
+                            aria-label="Delete todo"
+                    >
+                    </button>
                 </li>
             </ul>
         </section>
         <footer class="footer">
-            <p class="footer__items-left">3 items left</p>
-            <button class="footer__btn">All</button>
-            <button class="footer__btn">Active</button>
-            <button class="footer__btn">Completed</button>
-            <button class="footer__btn--clear">Clear completed</button>
+            <div class="footer__items-left" role="note">
+                3 items left
+            </div>
+
+            <div class="footer__switcher" aria-label="Switch todos type">
+                <input type="radio"
+                       name="footerSwitcher"
+                       class="switcher__check"
+                       aria-label="Show active todos"
+                >Active</input>
+                <input type="radio"
+                       name="footerSwitcher"
+                       class="switcher__check"
+                       aria-label="Show completed todos"
+                >Completed</input>
+                <input type="radio"
+                       name="footerSwitcher"
+                       class="switcher__check"
+                       aria-label="Show all todos"
+                >All</input>
+            </div>
+
+            <div class="footer__btn--clear" aria-label="Clear completed todos">
+                <button>Clear completed</button>
+            </div>
         </footer>
     </div>
 </body>
