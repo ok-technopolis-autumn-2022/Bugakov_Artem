@@ -1,0 +1,182 @@
+body
+  background-color: #F2F2F2
+  color: #666666
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+
+  min-height: 100vh
+  align-items: center
+
+  display: flex
+  justify-content: center
+
+.main-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.header
+  font-size: 100px
+  font-weight: 100
+  height: 110px
+  color: #CCCCCC
+  display: inline-block
+
+.content
+  background-color: #FFFFFF
+  width: 562px
+  min-height: 402px
+  box-shadow: 0px 2px 4px 0px #00000030
+  display: flex
+  flex-direction: column
+
+.content__header
+  display: flex
+  height: 66px
+  border-bottom: 1px solid #E6E6E6
+
+#content-header__check
+  background-image: url("./../../images/icons/select-all@2x.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 20px
+  background-color: #fff
+
+  align-self: center
+  width: 54px
+  height: 40px
+  margin: 10px
+  border: 0px #000 solid
+
+#content-header__new-todo
+  font-family: Roboto, sans-serif
+  font-style: italic
+  font-weight: 300
+  font-size: 24px
+
+  flex-grow: 1
+  border: none
+  color: #666666
+
+  line-height: 21px
+  text-align: left
+
+#content-header__new-todo::placeholder
+  color: #CCCCCC
+
+.todos
+  margin: 0
+  padding: 0
+
+.todo
+  color: #000000
+  font-size: 24px
+  display: flex
+  height: 64px
+  border-bottom: 1px solid #E6E6E6
+
+.todo:hover
+  background: #FAFAFA
+
+.todo__text
+  font-size: 24px
+  font-weight: 300
+  line-height: 21px
+  text-align: left
+  color: #666666
+
+  flex-grow: 1
+  justify-self: start
+  align-self: center
+
+.todo__btn--delete
+  border: 0px #000 solid
+  background-color: #fff
+
+.todo:hover > .todo__btn--delete
+  background-image: url("../../images/icons/close@2x.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 20px
+  background-color: #FAFAFA
+
+  width: 40px
+  height: 40px
+  margin: 11px
+  align-self: center
+  border: 0px #000 solid
+
+.todo__btn--check
+  margin: 9px
+  align-self: center
+  width: 40px
+  height: 40px
+  border: 1px solid #E6E6E6
+  border-radius: 50%
+  background-color: #FFFFFF
+
+.todo__btn--check:checked
+  background-image: url("../../images/icons/completed@2x.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 24px
+
+  border: 1px solid #5DC2AF
+
+.todo__btn--check:focus
+  border: 1px solid #CCCCCC
+
+.todo__btn--check
+  appearance: none
+
+.footer
+  height: 40px
+  color: #888888
+  font-size: 14px
+  border-top: 1px solid #E6E6E6
+  align-items: center
+  padding: 0px 12px
+  margin-top: auto
+  display: flex
+  justify-content: space-between
+
+.f-s-label__text
+  padding: 2px 5px
+  border-radius: 5%
+  border: 1px solid #ffffff
+
+
+.footer-switcher__check:checked + .f-s-label__text
+  border: 1px solid #EBDFDF
+
+
+.footer-switcher__check:focus + .f-s-label__text
+  border: 1px solid #000000
+
+.footer-switcher__check
+  appearance: none
+
+.footer__btn--clear
+  font-family: Roboto, sans-serif
+  font-size: 14px
+  font-weight: 300
+  color: #888888
+  border: 0px #000 solid
+  background-color: #fff
+  text-align: left
+  line-height: 21px
+
+
+#first-footer, #second-footer
+  background-color: #FFFFFF
+  width: 99%
+  height: 4px
+  z-index: -1
+  box-shadow: 0px 2px 4px 0px #00000033
+
+
+#second-footer
+  width: 98%
+  z-index: -2
+
