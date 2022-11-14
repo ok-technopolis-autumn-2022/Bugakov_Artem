@@ -1,25 +1,27 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>todo</title>
+    <link href="styles/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="main-wrapper">
-        <header class="header">
-            <h1 class="header__title">todos</h1>
-        </header>
+        <header class="header">todos</header>
 
         <section class="content">
             <div class="content__header">
-                <input type="checkbox"
+                <input type="button"
                        id="content-header__check"
                        aria-label="Select all todos"
                 >
                 <input type="text"
                        name="new-todo"
-                       id="new-todo"
+                       id="content-header__new-todo"
                        placeholder="What needs to be done?"
                        aria-label="Add todo"
                 >
@@ -32,10 +34,10 @@
                            aria-label="Add todo"
                     >
                     <p class="todo__text">HTML</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
+                    <input type="button"
+                           class="todo__btn--delete"
+                           aria-label="Delete todo"
                     >
-                    </button>
                 </li>
                 <li class="todo">
                     <input type="checkbox"
@@ -43,10 +45,10 @@
                            aria-label="Add todo"
                     >
                     <p class="todo__text">CSS</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
+                    <input type="button"
+                           class="todo__btn--delete"
+                           aria-label="Delete todo"
                     >
-                    </button>
                 </li>
                 <li class="todo">
                     <input type="checkbox"
@@ -54,10 +56,10 @@
                            aria-label="Add todo"
                     >
                     <p class="todo__text">JS</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
+                    <input type="button"
+                           class="todo__btn--delete"
+                           aria-label="Delete todo"
                     >
-                    </button>
                 </li>
                 <li class="todo">
                     <input type="checkbox"
@@ -65,40 +67,52 @@
                            aria-label="Add todo"
                     >
                     <p class="todo__text">JS tools</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
+                    <input type="button"
+                           class="todo__btn--delete"
+                           aria-label="Delete todo"
                     >
-                    </button>
                 </li>
             </ul>
-        </section>
-        <footer class="footer">
-            <div class="footer__items-left" role="note">
+
+            <footer class="footer">
+            <span class="footer__items-left" role="note">
                 3 items left
-            </div>
+            </span>
+                <span class="footer__switcher" aria-label="Switch todos type">
+                    <label class="footer-switcher__label">
+                        <input type="radio"
+                               name="footer-switcher"
+                               class="footer-switcher__check"
+                               aria-label="Show all todos"
+                        >
+                        <span class="f-s-label__text">All</span>
+                    </label>
 
-            <div class="footer__switcher" aria-label="Switch todos type">
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show active todos"
-                >Active</input>
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show completed todos"
-                >Completed</input>
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show all todos"
-                >All</input>
-            </div>
+                    <label class="footer-switcher__label">
+                        <input type="radio"
+                               name="footer-switcher"
+                               class="footer-switcher__check"
+                               aria-label="Show active todos"
+                        >
+                        <span class="f-s-label__text">Active</span>
+                    </label>
 
-            <div class="footer__btn--clear" aria-label="Clear completed todos">
-                <button>Clear completed</button>
-            </div>
-        </footer>
+                    <label class="footer-switcher__label">
+                        <input type="radio"
+                               name="footer-switcher"
+                               class="footer-switcher__check"
+                               aria-label="Show completed todos"
+                        >
+                        <span class="f-s-label__text">Completed</span>
+                    </label>
+                </span>
+                <button class="footer__btn--clear" aria-label="Clear completed todos">Clear completed</button>
+            </footer>
+        </section>
+
+        <div id="first-footer"></div>
+        <div id="second-footer"></div>
+
     </div>
 </body>
 </html>
