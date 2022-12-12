@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+}
+
+.todo-app {
+    margin: 20px auto 0;
+    max-width: 562px;
+    min-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.todo-app__header > h1 {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 100;
+    color: #CCCCCC;
+}
+
+.todo-app__frame {
+    position: relative;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px #00000030;
+}
+
+.todo-app__frame:before {
+    content: "";
+    height: 4px;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    right: 2px;
+    box-shadow: 0px 2px 4px 0px #00000033;
+}
+
+.todo-app__frame:after {
+    content: "";
+    height: 4px;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+    right: 4px;
+    box-shadow: 0px 2px 4px 0px #00000033;
+}
+
+.todo-app__main-controls {
+    display: flex;
+    height: 66px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.main-controls__select-all > button {
+    background-image: url("./../../images/icons/select-all@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    background-color: #fff;
+    border: 0px #000 solid;
+    height: 100%;
+    min-width: 60px;
+}
+
+.main-controls__new-todo {
+    flex: auto;
+}
+
+.main-controls__new-todo > input {
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    border: none;
+    color: #666666;
+    line-height: 21px;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-app__tasks {
+    min-height: 350px;
+}
+
+.todo-app__task-list {
+    list-style: none;
+}
+
+.todo-app__task-item {
+    color: #000000;
+    font-size: 24px;
+    height: 64px;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+}
+
+.todo-app__task-item:hover {
+    background: #FAFAFA;
+}
+
+.task-item__status {
+    display: block;
+    appearance: none;
+    margin: 9px;
+    align-self: center;
+    min-width: 40px;
+    height: 40px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.task-item__status:checked {
+    background-image: url("../../images/icons/completed@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+
+    border: 1px solid #5DC2AF;
+}
+
+.task-item__status:focus {
+    border: 1px solid #CCCCCC;
+}
+
+.task-item__text {
+    flex: auto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+    color: #666666;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
+}
+
+.task-item__delete {
+    border: 0px #000 solid;
+    background-color: #fff;
+}
+
+.todo-app__task-item:hover > .task-item__delete,
+.todo-app__task-item > .task-item__delete:hover,
+.todo-app__task-item > .task-item__delete:focus {
+    background-image: url("../../images/icons/close@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border: 0px #000 solid;
+    background-color: #FAFAFA;
+    min-width: 40px;
+    height: 40px;
+    align-self: center;
+    margin: 11px;
+}
+
+.todo-app__task-item > .task-item__delete:hover,
+.todo-app__task-item > .task-item__delete:focus {
+    border: 1px #000 solid;
+}
+
+.todo-app__task-item > .task-item__delete:focus {
+    background-color: #fff;
+}
+
+.todo-app__actions-bar {
+    height: 40px;
+    color: #888888;
+    font-size: 14px;
+    border-top: 1px solid #E6E6E6;
+    align-items: center;
+    padding: 0px 12px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.switcher__label > span {
+    padding: 2px 5px;
+    border-radius: 5%;
+    border: 1px solid #ffffff;
+}
+
+.switcher__label > input {
+    appearance: none;
+}
+
+input[type="radio"]:checked + span {
+    border: 1px solid #EBDFDF;
+}
+
+input[type="radio"]:focus + span {
+    border: 1px solid #EBDFDF;
+}
+
+.actions-bar__clear-completed > button {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #888888;;
+    border: 0px #000 solid;
+    background-color: #fff;
+    text-align: left;
+    line-height: 21px;
+}

@@ -1,104 +1,108 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>todo</title>
+    <link href="styles/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <header class="header">
-            <h1 class="header__title">todos</h1>
+    <div class="todo-app">
+        <header class="todo-app__header">
+            <h1>todos</h1>
         </header>
 
-        <section class="content">
-            <div class="content__header">
-                <input type="checkbox"
-                       id="content-header__check"
-                       aria-label="Select all todos"
-                >
-                <input type="text"
-                       name="new-todo"
-                       id="new-todo"
-                       placeholder="What needs to be done?"
-                       aria-label="Add todo"
-                >
-            </div>
+        <main class="todo-app__frame">
+            <section class="todo-app__main-controls">
+                <div class="main-controls__select-all">
+                    <button aria-label="Select all todos"></button>
+                </div>
 
-            <ul class="todos">
-                <li class="todo">
-                    <input type="checkbox"
-                           class="todo__btn--check"
-                           aria-label="Add todo"
-                    >
-                    <p class="todo__text">HTML</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
-                    >
-                    </button>
-                </li>
-                <li class="todo">
-                    <input type="checkbox"
-                           class="todo__btn--check"
-                           aria-label="Add todo"
-                    >
-                    <p class="todo__text">CSS</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
-                    >
-                    </button>
-                </li>
-                <li class="todo">
-                    <input type="checkbox"
-                           class="todo__btn--check"
-                           aria-label="Add todo"
-                    >
-                    <p class="todo__text">JS</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
-                    >
-                    </button>
-                </li>
-                <li class="todo">
-                    <input type="checkbox"
-                           class="todo__btn--check"
-                           aria-label="Add todo"
-                    >
-                    <p class="todo__text">JS tools</p>
-                    <button class="todo__btn--delete"
-                            aria-label="Delete todo"
-                    >
-                    </button>
-                </li>
-            </ul>
-        </section>
-        <footer class="footer">
-            <div class="footer__items-left" role="note">
-                3 items left
-            </div>
+                <form class="main-controls__new-todo">
+                    <input type="text" placeholder="What needs to be done?" aria-label="Add todo">
+                </form>
+            </section>
 
-            <div class="footer__switcher" aria-label="Switch todos type">
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show active todos"
-                >Active</input>
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show completed todos"
-                >Completed</input>
-                <input type="radio"
-                       name="footerSwitcher"
-                       class="switcher__check"
-                       aria-label="Show all todos"
-                >All</input>
-            </div>
+            <section class="todo-app__tasks">
+                <ul class="todo-app__task-list">
+                    <li class="todo-app__task-item">
+                        <input type="checkbox"
+                               class="task-item__status"
+                               aria-label="Completed todo: HTML"
+                        >
 
-            <div class="footer__btn--clear" aria-label="Clear completed todos">
-                <button>Clear completed</button>
-            </div>
-        </footer>
+                        <span class="task-item__text">HTML</span>
+                        <button class="task-item__delete" aria-label="Delete todo"></button>
+                    </li>
+                    <li class="todo-app__task-item">
+                        <input type="checkbox"
+                               class="task-item__status"
+                               aria-label="Completed todo: CSS"
+                        >
+
+                        <span class="task-item__text">CSS</span>
+                        <button class="task-item__delete" aria-label="Delete todo"></button>
+                    </li>
+                    <li class="todo-app__task-item">
+                        <input type="checkbox"
+                               class="task-item__status"
+                               aria-label="Completed todo: JS"
+                        >
+
+                        <span class="task-item__text">JS</span>
+                        <button class="task-item__delete" aria-label="Delete todo"></button>
+                    </li>
+                    <li class="todo-app__task-item">
+                        <input type="checkbox"
+                               class="task-item__status"
+                               aria-label="Completed todo: JS tools"
+                        >
+
+                        <span class="task-item__text">JS tools</span>
+                        <button class="task-item__delete" aria-label="Delete todo"></button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="todo-app__actions-bar">
+                <div class="actions-bar__items-left">
+                    <span>3 items left</span>
+                </div>
+
+                <div class="actions-bar__switcher">
+                    <label class="switcher__label">
+                        <input type="radio"
+                               name="switcher"
+                               aria-label="Show all todos"
+                        >
+                        <span>All</span>
+                    </label>
+
+                    <label class="switcher__label">
+                        <input type="radio"
+                               name="switcher"
+                               aria-label="Show active todos"
+                        >
+                        <span>Active</span>
+                    </label>
+
+                    <label class="switcher__label">
+                        <input type="radio"
+                               name="switcher"
+                               aria-label="Show completed todos"
+                        >
+                        <span>Completed</span>
+                    </label>
+                </div>
+
+                <div class="actions-bar__clear-completed">
+                    <button aria-label="Clear completed todos">Clear completed</button>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
